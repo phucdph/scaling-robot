@@ -1,6 +1,6 @@
 {
   "name": "@upmesh/test",
-  "version": "1.0.0-dev1",
+  "version": "0.0.0-development",
   "main": "./dist/index.js",
   "license": "MIT",
   "publishConfig": {
@@ -9,7 +9,8 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "rm -rf dist && rollup -c",
-    "release": "chmod +x ./scripts/publish.sh && ./scripts/publish.sh"
+    "release": "chmod +x ./scripts/publish.sh && ./scripts/publish.sh",
+    "semantic-release": "semantic-release"
   },
   "peerDependencies": {
     "react": ">=17.0.0",
@@ -28,6 +29,7 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-terser": "^7.0.2",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "semantic-release": "^19.0.3"
   }
 }
