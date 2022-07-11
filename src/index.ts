@@ -1,4 +1,4 @@
-const add = (a: number, b: number) => a+b+1;
+const add = (a: number, b: number) => a+b;
 
 export { add };
 export * from './hooks';
