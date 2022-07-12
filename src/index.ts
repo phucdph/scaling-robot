@@ -1,5 +1,7 @@
-const add = (a: number, b: number) => a+b;
+require('dotenv').config();
 
-export { add };
 export * from './hooks';
+export * from './configs';
+export * from "./services";
+
 

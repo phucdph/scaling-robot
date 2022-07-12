@@ -1,0 +1,29 @@
+name: dev-build
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Build the package
+          run: export APP_ENV=develop && yarn build
+      - name: Push package
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout build-develop
+          git add -A
+          git commit -m "Update test.txt"
+          git push
+
+
+

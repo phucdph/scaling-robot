@@ -11,7 +11,9 @@ export default defineConfig([
   {
     input: [
       "src/index.ts",
-      "src/hooks/index.ts"
+      "src/hooks/index.ts",
+      "src/services/index.ts",
+      "src/configs/index.ts"
     ],
     output: [
       {
@@ -32,6 +34,6 @@ export default defineConfig([
       }),
       terser(),
     ],
-    external: ["react", "react-dom"]
+    external: ["react", "react-dom", "axios"]
   },
 ]);
